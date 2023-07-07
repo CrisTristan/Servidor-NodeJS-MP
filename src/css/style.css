@@ -1,0 +1,14 @@
+.container-products{
+          order: 1px;
+          display: inline-block;
+          width: auto;
+          margin: auto;
+          text-align: left;
+}
+.body{
+    background-color: teal;      
+}
+
+#container-products{
+    background-color: green;
+}
