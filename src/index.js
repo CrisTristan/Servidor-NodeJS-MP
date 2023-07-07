@@ -28,7 +28,7 @@ res.status(404).json({
 })
 
 })
-//app.use(express.static('src/public'));
+app.use(express.static('src/public'));
 
 app.listen(PORT, ()=>{
       console.log(`Servidor escuchando en puerto ${PORT}`);    
