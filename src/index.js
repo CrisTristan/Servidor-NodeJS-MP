@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 //Conexion a mongoDB
 mongoose
-.connect(MONGODB_URI)
+.connect('mongodb+srv://Cristian:cris123@cluster0.cfsao4x.mongodb.net/ViveroDB?retryWrites=true&w=majority')
 .then(()=>console.log('Connected to MongoDB'))
 .catch(error => console.error(error));
 
