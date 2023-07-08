@@ -4,7 +4,7 @@ import paymentRoutes from '../routes/payment.routes.js'
 import bodyParser from 'body-parser';
 import {PORT, MONGODB_URI} from './config.js'
 import mongoose from 'mongoose';
-
+import cors from 'cors';
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -27,8 +27,12 @@ res.status(404).json({
   message: 'Endpoint not found'   
 })
 
-})
-app.use(express.static('src/public'));
+//const whiteList = ['URL Origen aqui'];
+
+
+});
+//app.use(express.static('src/public'));
+app.use(cors());
 
 app.listen(PORT, ()=>{
       console.log(`Servidor escuchando en puerto ${PORT}`);    
