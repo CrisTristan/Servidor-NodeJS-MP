@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 //Conexion a mongoDB
 mongoose
-.connect(proccess.env.MONGODB_URI)
+.connect(MONGODB_URI)
 .then(()=>console.log('Connected to MongoDB'))
 .catch(error => console.error(error));
 
