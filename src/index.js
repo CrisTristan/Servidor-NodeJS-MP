@@ -19,6 +19,9 @@ mongoose
 .then(()=>console.log('Connected to MongoDB'))
 .catch(error => console.error(error));
 
+//Politica de cors
+app.use(cors());
+
 //rutas
 app.use(paymentRoutes);
 
@@ -31,8 +34,13 @@ res.status(404).json({
 
 
 });
+
 //app.use(express.static('src/public'));
-app.use(cors());
+
+app.use((req, res, next)=>{
+
+  next()
+});
 
 app.listen(PORT, ()=>{
       console.log(`Servidor escuchando en puerto ${PORT}`);    
