@@ -6,7 +6,7 @@ import clientSchema from '../src/js/clients.js'
 import  cors from 'cors'
 
 let corsOptions = {
-  origin: 'https://viverolastorres.onrender.com/',
+  origin: 'https://viverolastorres.onrender.com',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
